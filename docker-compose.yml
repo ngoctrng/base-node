@@ -1,0 +1,17 @@
+version: '3'
+
+services: 
+  demo-app:
+    image: demo-app
+    container_name: demo-app
+    build: 
+      context: .
+      args:
+        PROJECT_DIR: $PWD
+    environment: 
+      - VAR=$VAR
+    ports: 
+      - "3000:3000"
+    volumes: 
+      - .:$PWD
+    command: ["npm", "run", "dev"]
