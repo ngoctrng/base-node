@@ -9,8 +9,10 @@ Project template setup with typescript, node.js and express
 
 1. clone git repo
 
-2. run `docker-compose build`
+2. run `npm install`
 
-3. run `docker-compose up`
+3. run `docker-compose build`
 
-4. Go to http://localhost:3000/health
+4. run `docker-compose up`
+
+5. Go to http://localhost:3000/health
