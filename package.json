@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./dist/bin/www.js",
     "dev": "nodemon ./src/bin/www.ts --exec 'npm run lint && ts-node'",
-    "build": "tsc",
+    "build-prod": "tsc",
     "lint": "eslint --ext .ts ./src"
   },
   "keywords": [],

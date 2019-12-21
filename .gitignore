@@ -1,6 +1,11 @@
 .vscode
 .idea
 
+# Build resource
+dist
+build
+built
+
 # Logs
 logs
 *.log
