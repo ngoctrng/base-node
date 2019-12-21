@@ -4,21 +4,40 @@ import cors from "cors"
 import helmet from "helmet"
 import compression from "compression"
 
-const app: Application = express()
+class App {
 
-/** Setup middlewares */
-app.use(cors())
-app.use(helmet())
-app.use(compression())
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+    private _app: Application;
 
-/**
- * demo routes
- */
-app.get("/health", (req: Request, res: Response): void => {
-    res.send("OK!")
-})
+    constructor() {
+        this._app = express();
 
-export default app
+        /** Setup middlewares */
+        this.middlewares()
+
+        /** Setup routes */
+        this.routes()
+    }
+
+    get app(): Application {
+        return this._app;
+    }
+
+    private middlewares(): void {
+        /** Setup middlewares */
+        this._app.use(cors())
+        this._app.use(helmet())
+        this._app.use(compression())
+        this._app.use(morgan('dev'))
+        this._app.use(express.json())
+        this._app.use(express.urlencoded({ extended: true }))
+    }
+
+    private routes(): void {
+        /** demo routes */
+        this._app.get("/health", (req: Request, res: Response): void => {
+            res.send("OK!")
+        })
+    }
+}
+
+export default new App().app;
