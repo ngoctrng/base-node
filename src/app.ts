@@ -34,7 +34,7 @@ class App {
 
     private routes(): void {
         /** demo routes */
-        this._app.get("/health", (req: Request, res: Response): void => {
+        this._app.get("/_health", (req: Request, res: Response): void => {
             res.send("OK!")
         })
     }
