@@ -12,7 +12,7 @@ services:
     environment: 
       - VAR=$VAR
     ports: 
-      - "3000:3000"
+      - "8088:3000"
     volumes: 
       - .:$PWD
     command: ["npm", "run", "dev"]
