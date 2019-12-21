@@ -1,13 +1,14 @@
 version: '3'
 
 services: 
-  demo-app:
-    image: demo-app
-    container_name: demo-app
+  demo-service:
+    image: demo-service
+    container_name: demo-service
     build: 
       context: .
       args:
         PROJECT_DIR: $PWD
+    # env_file: .env
     environment: 
       - VAR=$VAR
     ports: 
