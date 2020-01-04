@@ -9,10 +9,10 @@ Project template setup with typescript, node.js and express
 
 1. clone git repo
 
-2. run `make install`
+2. run `npm run install`
 
-3. run `make build`
+3. run `npm run build`
 
-4. run `make run`
+4. run `npm run start:docker`
 
 5. Go to http://localhost:3000/_health

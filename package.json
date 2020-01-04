@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node ./dist/bin/www.js",
     "dev": "nodemon ./src/bin/www.ts --exec 'npm run lint && ts-node'",
-    "build-prod": "tsc",
+    "build:prod": "tsc",
+    "build:dev": "docker-compose build",
+    "start:docker": "docker-compose up",
     "lint": "eslint --ext .ts ./src"
   },
   "keywords": [],
